@@ -7,3 +7,8 @@
 ``` npm run build-prod ```
 - Start the server by running
 ``` npm start ```
+- After that the website is ready at [http://localhost:8081]
+
+## Running test
+- Write in the console the following
+``` npm test ```
