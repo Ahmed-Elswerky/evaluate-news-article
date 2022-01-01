@@ -10,15 +10,10 @@
       <div class="container">
         <p>Enter a URL of an article / a blog to discover its sentiment.</p>
         <section>
-          <form id="form">
+          <form id="form" onsubmit="event.preventDefault()">
             <label for="article-url">URL</label>
             <input id="article-url" type="text" name="input" value="" placeholder="Enter Article URL here" />
-            <button
-              type="submit"
-              class="btn-submit"
-            >
-              Submit
-            </button>
+            <button type="submit" class="btn-submit" id="submit-btn">Submit</button>
           </form>
         </section>
 
@@ -35,11 +30,11 @@
     </main>
     <script>
       // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
+      if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-        })
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
       }
     </script>
   </body>
